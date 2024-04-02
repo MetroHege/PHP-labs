@@ -1,11 +1,11 @@
 <?php
 // dbConnect.php
 
-global $host, $dbname, $username, $password;
+global $host, $dbname, $username, $password, $port;
 
 require 'dbconfig.php';
 
-$dsn = "mysql:host=$host;dbname=$dbname;charset=utf8";
+$dsn = "mysql:host=$host;dbname=$dbname;charset=utf8;port=$port";
 
 try {
     $DBH = new PDO($dsn, $username, $password);
